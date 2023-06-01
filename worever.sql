@@ -30,23 +30,53 @@ create table obra(
 
 create table lightnovel(
 idLightnovel,
-nome,
-)
+nome int,
+fkObra int,
+fkAutor int,
+fkDestribuidora int,
+fkMangaka int,
+constraint fkObraAutorLight foreign key(fkObra,fkAutor)
+    references obra (idObra,fkAutor),
+constraint fkDestribuidoraLight foreign key (fkDestribuidora) REFERENCES destribuidora (idDestribuidora),
+constraint fkMangakaLight foreign key (fkMangaka) REFERENCES mangaka (idMangaka)
+);
 
 create table manga(
 idManga,
-nome,
-)
+nome int,
+fkObra int,
+fkAutor int,
+fkDestribuidora int,
+mangaka int,
+constraint fkObraAutorManga foreign key(fkObra,fkAutor)
+    references obra (idObra,fkAutor),
+constraint fkDestribuidoraLight foreign key (fkDestribuidora) REFERENCES destribuidora (idDestribuidora),
+constraint fkMangakaLight foreign key (fkMangaka) REFERENCES mangaka (idMangaka),
+);
 
 create table manhawa(
 idManhawa,
-nome,
-)
+nome int,
+fkObra int,
+fkAutor int,
+fkDestribuidora int,
+mangaka int,
+constraint fkObraAutorManhawa foreign key(fkObra,fkAutor)
+    references obra (idObra,fkAutor),
+constraint fkDestribuidoraLight foreign key (fkDestribuidora) REFERENCES destribuidora (idDestribuidora),
+constraint fkMangakaLight foreign key (fkMangaka) REFERENCES mangaka (idMangaka),
+);
 
 create table anime(
-idAnime,
-nome,
-)
+idAnime int primary key auto_increment,
+nome int,
+fkObra int,
+fkAutor int,
+fkProdutora int,
+constraint fkObraAutorAnime foreign key(fkObra,fkAutor)
+    references obra (idObra,fkAutor),
+constraint fkProdutoraAnime foreign key (fkProdutora) REFERENCES produtora (idProdutora),
+);
 
 create table personagem(
 idPersonagem,
