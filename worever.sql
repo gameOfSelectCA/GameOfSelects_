@@ -201,7 +201,7 @@ create table anime(
 )auto_increment = 2050;
 
 create table saga(
-	idSaga int auto_increment,
+	idSaga int primary key auto_increment,
     nome varchar(45),
     fkAnimeSaga int,
     fkProdutoraSaga int,
@@ -227,9 +227,16 @@ create table saga(
 		references destribuidora(idDestribuidora),
 	constraint fkdestribuidoraManhwaSaga foreign key (fkdestribuidoraManhwaSaga)
 		references destribuidora(idDestribuidora),
-	constraint pkSaga primary key 
-    (idSaga, fkAnimeSaga, fkLightSaga, fkMangaSaga, fkManhwaSaga, fkdestribuidoraLightSaga, fkdestribuidoraMangaSaga, fkdestribuidoraManhwaSaga)
 );
+
+insert into saga values 
+(null,'East Blue', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Alabasta', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Skypiea', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Water 7', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Thriller Bark', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Guerra de Marineford', 2050, 107, 2050, null, null, 152, null),
+(null,'Uma garota em um pais estrangeiro', null, 100, null, 2051, null, 152, null);
 
 create table episodio(
     idEpisodio int primary key auto_increment,
