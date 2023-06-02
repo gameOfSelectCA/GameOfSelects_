@@ -7,6 +7,8 @@ use gameSelect;
     statusvida varchar(5),
     constraint statusvida check (
         statusvida in (
+            'vivo?'
+            or
             'vivo'
             or 'morto'
         )
@@ -17,25 +19,15 @@ insert into autor values
 (null,'Eiichiro Oda','1975-01-01','vivo'),
 (null,'Kana Akatsuki',null,'vivo'),
 (null,'Kore Yamazaki','1990-06-10','vivo'),
-(null,'','',''),
-(null,'','',''),
+(null,'Okayado','1982-12-15','vivo?'),
+(null,'Fuse','','vivo'),
 (null,'','',''),
 (null,'','',''),
 (null,'','',''),
 (null,'','',''),
 (null,'','',''),
 (null,'Nagabe','1993-08-01','vivo'),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
-(null,'','',''),
+(null,'','','');
 
 
 create table mangaka(
@@ -53,6 +45,7 @@ insert into mangaka values
 (null,'Eiichiro Oda',48 ,'vivo'),
 (null,'Nagabe',29,'vivo'),
 (null,'Kore Yamazaki',32,'vivo'),
+(null,'Mitz Vah',null,'vivo');
 
 
 
@@ -74,12 +67,7 @@ insert into produtora values
 (null,'studio Sunrise','1972-09-01'),
 (null,'Bandai Visual','1983-08-23'),
 (null,'Madhouse','1972-10-17'),
-(null,'',''),
-(null,'',''),
-(null,'',''),
-(null,'',''),
-(null,'',''),
-(null,'','');
+(null,'Tokuma Shoten','1954-03-19');
 
 create table destribuidora(
     idDestribuidora int primary key auto_increment,
@@ -89,7 +77,8 @@ create table destribuidora(
 
 insert into destribuidora values
 (null,'Seven Seas','2004-01-01'),
-(null,'Mag Garden','2001-06-05');
+(null,'Mag Garden','2001-06-05'),
+(null,' Monthly Comic Ryū','1979-05-01');
 
 create table generoPrincipal(
     idGeneroPrincipal int primary key auto_increment,
@@ -102,8 +91,8 @@ insert into generoPrincipal values
 (null,'shoujo'),
 (null,'seinen'),
 (null,'josei'),
-(null,'slice of life')
-;
+(null,'slice of life');
+
 create table obra(
     idObra int auto_increment,
     nome varchar(45),
@@ -126,13 +115,12 @@ create table obra(
 ) auto_increment = 200;
 
 insert into obra values
-(null,'One Piece',1,1500,51,Monkey D.Luffy)
-(null,'Violet Evergarden ',2,50,1501,violet)
-(null,'Mahoutsukai no yome',3,53,1500,Chise)
-(null,'totsukuni no shoujo',11,52,1504,protagonista)
-
-
-;
+(null,'One Piece',1,51,1500,Monkey D.Luffy),
+(null,'Violet Evergarden ',2,50,1505,violet),
+(null,'Mahoutsukai no yome',3,53,1500,Chise),
+(null,'totsukuni no shoujo',11,52,1504,Shiva),
+(null,'tensei shitara slime datta ken',5,55,1501, Rimuru),
+(null,'Monster Musume no Iru Nichijou',4,1503,Kurusu Kimihito);
 
 
 create table personagem(
