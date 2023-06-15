@@ -139,7 +139,7 @@ create table manga(
     fkObraManga int,
     fkAutorManga int,
     fkDestribuidoraManga int,
-    fkMangakaManga int,
+    fkMangaka int,
     constraint fkObraManga foreign key(fkObraManga) references obra (idObra),
     constraint fkAutorManga foreign key(fkAutorManga) references obra(fkAutor),
     constraint fkDestribuidoraManga foreign key (fkDestribuidoraManga) REFERENCES destribuidora (idDestribuidora),
@@ -157,7 +157,7 @@ create table manhwa(
     fkObraManhwa int,
     fkAutorManhwa int,
     fkDestribuidora int,
-    fkMangakaManhwa int,
+    fkMangaka int,
     constraint fkObraManhawa foreign key(fkObraManhwa) references obra (idObra),
     constraint fkAutorManhwa foreign key(fkAutorManhwa) references obra(fkAutor),
     constraint fkDestribuidoraManhwa foreign key (fkDestribuidora) REFERENCES destribuidora (idDestribuidora),
@@ -175,7 +175,10 @@ create table anime(
     constraint fkProdutoraAnime foreign key (fkProdutora) REFERENCES produtora (idProdutora)
 )auto_increment = 2050;
 
-insert into anime values (null,'One piece' ,200,1,107),(null,'Violet Evergarden' ,201,2,101);
+insert into anime values 
+(null,'One piece' ,200,1,107),
+(null,'Violet Evergarden' ,201,2,101);
+
 select * from anime;
 
 create table saga(
@@ -217,29 +220,20 @@ insert into saga values
 (null,'Uma garota em um pais estrangeiro', null, 100, null, 2051, null, 152, null, null);
 
 create table episodio(
-    idEpisodio int primary key auto_increment,
+    idEpisodio int auto_increment,
     nome varchar(45),
     fkSaga int,
-    fkAnime int,
-    fkProdutora int,
     constraint saga foreign key (fkSaga) references saga(idSaga),
-    constraint Anime foreign key (fkAnime) references anime(idAnime),
-    constraint Produtora foreign key (fkProdutora) references produtora(idProdutora)
+    constraint pkEpisodio primary key (idEpisodio, fkSaga)
 ) auto_increment = 2000;
 
 	
 
 create table capitulo(
-    idCapitulo int primary key auto_increment,
+    idCapitulo int auto_increment,
     nome varchar(45),
     fkSagaCapitulo int,
-    fkManga int,
-    fklightNovel int,
-    fkManhwa int,
-    fkDestribuidora int,
-    constraint sagaCapitulo foreign key (fksagaCapitulo) references saga(idSaga),
-    constraint Manga foreign key (fkManga) references manga(idManga),
-    constraint lightnovel foreign key (fkLightnovel) references lightnovel(idLightnovel),
-    constraint manhwa foreign key (fkManhwa) references manhwa(idManhwa),
-    constraint Destribuidora foreign key (fkDestribuidora) references destribuidora(idDestribuidora)
+    constraint fkSagaCapitulo foreign key (fkSagaCapitulo)
+        references saga(idSaga),
+    constraint pkCapitulo primary key (idCapitulo, fkSagaCapitulo)
 ) auto_increment = 2500;
