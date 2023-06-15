@@ -1,5 +1,7 @@
-create database gameSelect ;
 drop database gameSelect ;
+
+create database gameSelect ;
+
 use gameSelect;
 
 
@@ -143,7 +145,7 @@ create table manga(
     constraint fkObraManga foreign key(fkObraManga) references obra (idObra),
     constraint fkAutorManga foreign key(fkAutorManga) references obra(fkAutor),
     constraint fkDestribuidoraManga foreign key (fkDestribuidoraManga) REFERENCES destribuidora (idDestribuidora),
-    constraint fkMangakaManga foreign key (fkMangakaManga) REFERENCES mangaka (idMangaka)
+    constraint fkMangakaManga foreign key (fkMangaka) REFERENCES mangaka (idMangaka)
 )auto_increment = 2050;
 
 insert into manga values 
@@ -161,7 +163,7 @@ create table manhwa(
     constraint fkObraManhawa foreign key(fkObraManhwa) references obra (idObra),
     constraint fkAutorManhwa foreign key(fkAutorManhwa) references obra(fkAutor),
     constraint fkDestribuidoraManhwa foreign key (fkDestribuidora) REFERENCES destribuidora (idDestribuidora),
-    constraint fkMangakaManhwa foreign key (fkMangakaManhwa) REFERENCES mangaka (idMangaka)
+    constraint fkMangakaManhwa foreign key (fkMangaka) REFERENCES mangaka (idMangaka)
 )auto_increment = 2050;
 
 create table anime(
@@ -218,6 +220,9 @@ insert into saga values
 (null,'Saga Thriller Bark', 2050, 107, 2050, null, null, 152, null, null),
 (null,'Saga Guerra de Marineford', 2050, 107, 2050, null, null, 152, null, null),
 (null,'Uma garota em um pais estrangeiro', null, 100, null, 2051, null, 152, null, null);
+
+
+
 
 create table episodio(
     idEpisodio int auto_increment,

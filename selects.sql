@@ -41,3 +41,19 @@ select idAutor, nome, dtNasc from autor  where nome like '%O%' order by idAutor 
 
 select idAutor, nome, dtNasc from autor  where nome like '%O%' order by idAutor desc limit 1;
 
+
+-- *11 fazer um select que pegue todos os itens da tabela manga
+select * from manga;
+
+
+-- *12 fazer um select que pegue todos os itens da tabela manga
+select * from manga;
+
+-- *13 fazer um select que pegue todos os itens da tabela manga
+select * from manga;
+
+-- *14 fazer um select que pegue todos os itens da tabela manga
+select * from manga;
+
+-- *15 fazer um select que pegue todos os itens da tabela saga cujo o nome seja East Blue
+select * from saga where nome='East Blue';
