@@ -59,8 +59,13 @@ create table destribuidora(
 insert into destribuidora values
 (null,'Seven Seas','2004-01-01'),
 (null,'Mag Garden','2001-06-05'),
+<<<<<<< HEAD
 (null,' Kyoto Animation','1981-03-03'),
 (null, 'Shueisha','1925-01-02');
+=======
+(null, 'Shueisha','1997-03-03'),
+(null,' Kyoto Animation','1981-03-03');
+>>>>>>> bee69748979f6b82ef90a872f0b3cc7371a39bce
 
 
 
@@ -93,7 +98,13 @@ create table personagem(
 ) auto_increment = 1000;
 
 
+<<<<<<< HEAD
 insert into personagem values(null, 'Monkey D.Luffy', 17, 'quinto imperador','ser o rei dos piratas'),(null, 'violet', 14, 'automata','achar a paz'),(null, ' Chise Hatori', 15, 'Sleigh Beggy','aprender magia');
+=======
+insert into personagem values(null, 'Monkey D.Luffy', 17, 'quinto imperador','ser o rei dos piratas');
+insert into personagem values(null, 'violet', 14, 'automata','achar a paz');
+insert into personagem values(null, ' Chise Hatori', 15, 'Sleigh Beggy','aprender magia');
+>>>>>>> bee69748979f6b82ef90a872f0b3cc7371a39bce
 
 create table obra(
     idObra int auto_increment,
@@ -132,7 +143,11 @@ create table lightnovel(
 )auto_increment = 2050;
 
 
+<<<<<<< HEAD
 insert into lightnovel values (null,'Violet Evergarden',201 ,2,152, 52);
+=======
+insert into lightnovel values (null,'Violet Evergarden',201 ,2,152, 52)	;
+>>>>>>> bee69748979f6b82ef90a872f0b3cc7371a39bce
 
 create table manga(
     idManga int primary key auto_increment,
@@ -146,7 +161,11 @@ create table manga(
     constraint fkMangakaManga foreign key (fkMangakaManga) REFERENCES mangaka (idMangaka)
 )auto_increment = 2050;
 
+<<<<<<< HEAD
 insert into manga values (null,'One Piece', 200, 1, 152,51),(null,'Violet Evergarden',201 ,2,152, 52);
+=======
+insert into manga values (null,'One Piece', 200, 1, 107,51);
+>>>>>>> bee69748979f6b82ef90a872f0b3cc7371a39bce
 
 create table manhwa(
     idManhwa int primary key auto_increment,
@@ -169,6 +188,7 @@ create table anime(
     constraint fkObraAutorAnime foreign key(fkObra, fkAutor) references obra (idObra, fkAutor),
     constraint fkProdutoraAnime foreign key (fkProdutora) REFERENCES produtora (idProdutora)
 )auto_increment = 2050;
+<<<<<<< HEAD
 
 insert into anime values (null,'One piece' ,200,1,107),(null,'Violet Evergarden' ,201,2,101);
 select * from anime;
@@ -202,6 +222,46 @@ create table saga(
 	constraint pkSaga primary key 
     (idSaga, fkAnimeSaga, fkLightSaga, fkMangaSaga, fkManhwaSaga, fkdestribuidoraLightSaga, fkdestribuidoraMangaSaga, fkdestribuidoraManhwaSaga)
 );
+=======
+
+create table saga(
+	idSaga int primary key auto_increment,
+    nome varchar(45),
+    fkAnimeSaga int,
+    fkProdutoraSaga int,
+    fkLightSaga int,
+    fkMangaSaga int,
+    fkManhwaSaga int,
+    fkdestribuidoraLightSaga int,
+    fkDestribuidoraMangaSaga int,
+    fkDestribuidoraManhwaSaga int,
+    constraint fkAnimeSaga foreign key (fkAnimeSaga)
+		references anime(idAnime),
+	constraint fkProdutoraSaga foreign key (fkProdutoraSaga)
+		references produtora(idProdutora),
+	constraint fkLightSaga foreign key (fkLightSaga)
+		references lightnovel(idLightnovel),
+	constraint fkMangaSaga foreign key (fkMangaSaga)
+		references manga(idManga),
+	constraint fkManhwaSaga foreign key (fkManhwaSaga)
+		references manhwa(idManhwa),
+	constraint fkdestribuidoraLightSaga foreign key (fkdestribuidoraLightSaga)
+		references destribuidora(idDestribuidora),
+	constraint fkdestribuidoraMangaSaga foreign key (fkdestribuidoraMangaSaga)
+		references destribuidora(idDestribuidora),
+	constraint fkdestribuidoraManhwaSaga foreign key (fkdestribuidoraManhwaSaga)
+		references destribuidora(idDestribuidora),
+);
+
+insert into saga values 
+(null,'East Blue', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Alabasta', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Skypiea', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Water 7', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Thriller Bark', 2050, 107, 2050, null, null, 152, null),
+(null,'Saga Guerra de Marineford', 2050, 107, 2050, null, null, 152, null),
+(null,'Uma garota em um pais estrangeiro', null, 100, null, 2051, null, 152, null);
+>>>>>>> bee69748979f6b82ef90a872f0b3cc7371a39bce
 
 create table episodio(
     idEpisodio int primary key auto_increment,
