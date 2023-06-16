@@ -63,8 +63,7 @@ insert into destribuidora values
 (null,'Mag Garden','2001-06-05'),
 (null,' Kyoto Animation','1981-03-03'),
 (null, 'Shueisha','1925-01-02'),
-(null, 'Shueisha','1997-03-03'),
-(null,' Kyoto Animation','1981-03-03');
+(null, 'Shueisha','1997-03-03');
 
 
 
@@ -115,7 +114,7 @@ create table obra(
 
 insert into obra values
 (null,'One Piece',1,1500,1000),
-(null,'Violet Evergarden ',2,1500,1001),
+(null,'Violet Evergarden',2,1500,1001),
 (null,'Mahoutsukai no yome',3,1500,1002);
 
 create table lightnovel(
