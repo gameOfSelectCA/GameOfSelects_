@@ -40,8 +40,8 @@ create table produtora(
 
 insert into produtora values
 (null,'Shin-Ei Animation', '1976-09-09'),
-(null,'Wit Studio','2012-06-01'),
-(null,'MAPPA','2011-06-14'),
+(null,'Wit Studio','2012-06-01'), -- xpto 101
+(null,'MAPPA','2011-06-14'), -- xpto 102
 (null,'Ufotable','2000-10-1'),
 (null,'Kyoto Animation','1985-07-12'),
 (null,'Trigger','2011-08-22'),
@@ -132,7 +132,8 @@ create table lightnovel(
 )auto_increment = 2050;
 
 
-insert into lightnovel values (null,'Violet Evergarden',201 ,2,152, 52);
+insert into lightnovel values 
+(null,'Violet Evergarden',201 ,2,152, 52);
 
 
 create table manga(
