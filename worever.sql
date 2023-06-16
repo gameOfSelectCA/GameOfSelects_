@@ -93,7 +93,7 @@ create table personagem(
     nome varchar(45),
     idade int,
     alcunha varchar(45),
-    objetivo varchar(45)
+    objetivo varchar(450)
 ) auto_increment = 1000;
 
 
@@ -227,7 +227,7 @@ insert into saga values
 
 create table episodio(
     idEpisodio int auto_increment,
-    nome varchar(45),
+    nome varchar(100),
     fkSaga int,
     constraint saga foreign key (fkSaga) references saga(idSaga),
     constraint pkEpisodio primary key (idEpisodio, fkSaga)
@@ -237,7 +237,7 @@ create table episodio(
 
 create table capitulo(
     idCapitulo int auto_increment,
-    nome varchar(45),
+    nome varchar(100),
     fkSagaCapitulo int,
     constraint fkSagaCapitulo foreign key (fkSagaCapitulo)
         references saga(idSaga),
