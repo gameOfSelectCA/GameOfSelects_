@@ -110,8 +110,10 @@ select obra.nome, generoPrincipal.nome from obra join generoPrincipal on idGener
 select personagem.nome, obra.nome, anime.nome from personagem join obra on fkProtagonistaObra = idPersonagem join anime on anime.fkObraAnime= obra.idObra where personagem.idade >16;
 
 
--- ! 02 
+-- ! 02 mostre por meio de um select chamado resultado quantos episodios a "inuyasha temporada-1 " tem a mais do que "inuyasha temporada-4" 
+
+select (select count(idEpisodio) from episodio join saga on idsaga = fkSaga where saga.nome ='inuyasha temporada-4' )-(select count(idEpisodio) from episodio join saga on idsaga = fkSaga where saga.nome ='inuyasha temporada-1');
 
 
-select count(idEpisodio) from episodio join saga on idsaga = fkSaga where ;
+-- ! 03 
 

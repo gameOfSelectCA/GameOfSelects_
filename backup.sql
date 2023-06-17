@@ -1,108 +1,100 @@
 insert into autor values
 (null,'Rumiko Takahashi','1957-10-10','vivo'),
 (null,'Natsume Akatsuki.',null,'vivo'),
-(null,'Tsuyoshi Yoshioka',null,'vivo')-- xpto 6 kenja
-(null,'Hajime Isayama','1986-08-29','vivo') 
--- xpto 7
-;
+(null,'Tsuyoshi Yoshioka',null,'vivo') ,
+(null,'Hajime Isayama','1986-08-29','vivo');
+
+
 insert into mangaka values
 (null,'Rumiko Takahashi','1957-10-10','vivo'),
--- xpto 54
+
 (null,'Kurone Mishima',null,'vivo'),
--- xpto 55
-(null,'Masahito Watari',null,'vivo')
--- xpto 56
-(null,'Seiji Kikuchi',null,'vivo')-- xpto 57 kenja
-(null,'Hajime Isayama','1986-08-29','vivo')
--- xpto 58 
-(null,'Shunsuke Ogata',null,'vivo')
--- xpto 59 kenja manga
-;
+
+(null,'Masahito Watari',null,'vivo'),
+
+(null,'Seiji Kikuchi',null,'vivo') ,
+(null,'Hajime Isayama','1986-08-29','vivo'),
+ 
+(null,'Shunsuke Ogata',null,'vivo');
 
 insert into destribuidora values
-(null,'Weekly Shōnen Sunday','1959-05-17'),-- xpto 156
-(null,'Kadokawa Sneaker Bunko',), -- xpto 157
-(null,'Kadokawa Shoten','1945-11-10'), --xpto 158
-(null,'Famitsu Bunko','1998-07-18'),-- xpto 159 kenja
-(null,'Kodansha','1909-01-01'),-- xpto 160
-(null,'tankobon','1909-01-01') -- xpto 161 kenja 
-;
+(null,'Weekly Shōnen Sunday','1959-05-17'),
+(null,'Kadokawa Sneaker Bunko',null), 
+(null,'Kadokawa Shoten','1945-11-10'), 
+(null,'Famitsu Bunko','1998-07-18'),
+(null,'Kodansha','1909-01-01'),
+(null,'tankobon','1909-01-01');
 
 insert into produtora values 
-(null,'Yomiuri TV','1958-02-13'),-- xpto 112
-(null,'Studio Deen','1975-05-14'); -- xpto 113
-(null,'Silver Link','2007-12-01')-- xpto 114 kenja
+(null,'Yomiuri TV','1958-02-13'),
+(null,'Studio Deen','1975-05-14'),
+(null,'Silver Link','2007-12-01');
 
 
 insert into personagem values
 (null,'Inuyasha',200, null,'conseguir todos os fragmentos das joias de quatro almas.'),
--- xpto 1003
-(null, 'Kagome',15, 'reencarnação da kykio', 'recuperar os fragmentos da joia de quatro almas.'),
--- xpto 1004
+
+(null, 'Kagome',15,'reencarnação da kykio', 'recuperar os fragmentos da joia de quatro almas.'),
+
 (null,'Sesshoumaru',200, null,'se vingar do Naraku'),
--- xpto 1005
-(null,'Kasuma',17,'viver'),
--- xpto 1006
-(null,'Megumin',14,'se tornar a maior maga de explosôes'),
--- xpto 1007
-(null,'Eren Yeger',17,'TATAKAE'),
--- xpto 1008
-(null,'Mikasa',15,'Erem'),
--- xpto 1009
-(null,'Levi',31,'L-i-m-p-a-r'),
--- xpto 1010
-(null,'Shin Wolford',16,'se formar na academia de magia')
-;
+
+(null,'Kasuma',17,null,'viver'),
+
+(null,'Megumin',14,null,'se tornar a maior maga de explosôes'),
+
+(null,'Eren Yeger',17,null,'TATAKAE'),
+
+(null,'Mikasa',15,null,'Erem'),
+
+(null,'Levi',31,null,'L-i-m-p-a-r'),
+
+(null,'Shin Wolford',16,null,'se formar na academia de magia');
 
 
 
 
 insert into obra values
 (null,'Sengoku Otogizōshi InuYasha',4,1506,1003),
--- xpto 203 
+
 (null,'Kono Subarashii Sekai ni Shukufuku o!',5,1509,1006),
--- xpto 204
-(null,'kenja no mago',6,1507,1011)-- xpto 205 kenja
-(null,'Shingeki no kyoujin',7,1501,1008)
--- xpto 206
+
+(null,'kenja no mago',6,1507,1011),
+(null,'Shingeki no kyoujin',7,1501,1008);
+
 
 
 insert into manga values
 (null,'Sengoku Otogizōshi InuYasha',203,4,156,54),
--- xpto 2051 
+
 (null,'Kono Subarashii Sekai ni Shukufuku o!',204,5,158,56),
--- xpto 2052
-(null,'kenja no mago',205,6,159,57)-- xpto 2053 kenja
+
+(null,'kenja no mago',205,6,159,57),
 (null,'Shingeki no kyoujin',206,7,160,58);
--- xpto 2054
+
 
 
 insert into lightnovel values
-(null,'Inuyasha',203,4,156,54),-- xpto 2051 
-(null,'Kono Subarashii Sekai ni Shukufuku o!',204,5,157,55);-- xpto 2052
-(null,'kenja no mago',205,6,161,59)-- xpto 2053 kenja
+(null,'Inuyasha',203,4,156,54),
+(null,'Kono Subarashii Sekai ni Shukufuku o!',204,5,157,55),
+(null,'kenja no mago',205,6,160,59);
 
 
 
 
 insert into anime values
-(null,'inuyasha',203,4,112) -- xpto 2052
-(null,'Kono Subarashii Sekai ni Shukufuku o!',204,5,113);
-(null,'kenja no mago',205,6,114)-- xpto 2054 kenja
-(null,'shingeki no kyoujin',206,7,101)-- xpto 2055
-(null,'shingeki no kyoujin',206,7,102)-- xpto 2056
-
-
-
-;
+(null,'inuyasha',203,4,112) ,
+(null,'Kono Subarashii Sekai ni Shukufuku o!',204,5,113),
+(null,'kenja no mago',205,6,114),
+(null,'shingeki no kyoujin',206,7,101),
+(null,'shingeki no kyoujin',206,7,102);
 
 insert into saga values
-(null,'inuyasha temporada-1',2052,112,2051,2051,null,105,105,null),--8
-(null,'inuyasha temporada-2',2052,112,2051,2051,null,105,105,null),
-(null,'inuyasha temporada-3',2052,112,2051,2051,null,105,105,null),
-(null,'inuyasha temporada-4',2052,112,2051,2051,null,105,105,null),
-(null,'inuyasha temporada-5',2052,112,2051,2051,null,105,105,null),
-(null,'inuyasha temporada-6',2052,112,2051,2051,null,105,105,null),13
+(null,'inuyasha temporada-1',2052,112,null,2051,null,null,150,null),
+(null,'inuyasha temporada-2',2052,112,null,2051,null,null,150,null),
+(null,'inuyasha temporada-3',2052,112,null,2051,null,null,150,null),
+(null,'inuyasha temporada-4',2052,112,null,2051,null,null,150,null),
+(null,'inuyasha temporada-5',2052,112,null,2051,null,null,150,null),
+(null,'inuyasha temporada-6',2052,112,null,2051,null,null,150,null),
 (null,'Arco de Axel',2053,113,2052,2052,null,157,158,null),
 (null,'Arco do Beldia',2053,113,2052,2052,null,157,158,null),
 (null,'Um Segundo Arco da Morte',2053,113,2052,2052,null,157,158,null),
@@ -111,9 +103,7 @@ insert into saga values
 (null,'Injustiça Judicial',2053,113,2052,2052,null,157,158,null),
 (null,'Arco da Masmorra de Keele',2053,113,2052,2052,null,157,158,null),
 (null,'Arco da Darkness',2053,113,2052,2052,null,157,158,null),
-(null,'Arco do Vanir',2053,113,2052,2052,null,157,158,null),--22
-(null,'Kenja no Mago Temporada-1'),-- xpto 23 kenja
-(null,'Kenja no Mago Temporada-2'),-- xpto 24 kenja
+(null,'Arco do Vanir',2053,113,2052,2052,null,157,158,null),
 (null,'Arco da Queda de Shiganshina',2055,101,null,2054,null,null,160,null),
 (null,'Arco do Batalha do Distrito de Trost',2055,101,null,2054,null,null,160,null),
 (null,'Arco do Treinamento da 104ª Tropa',2055,101,null,2054,null,null,160,null),
@@ -295,7 +285,7 @@ insert into episodio values
 (null,'O compromisso do casal para o uso da Jóia (parte 1)',13),
 (null,'O compromisso do casal para o uso da Jóia (parte 2)',13),
 (null,'Esta deusa autoproclamada e uma reencarnação em outro mundo!',14),
-(null,'Uma explosão para este chūnibyō!'14),
+(null,'Uma explosão para este chūnibyō!',14),
 (null,'Um tesouro de lingerie para esta mão direita!',14),
 (null,'Magia explosiva para este inimigo formidável!',15),
 (null,'Um prêmio por esta espada amaldiçoada!',15),
@@ -326,10 +316,10 @@ insert into episodio values
 (null, 'A queda do império', 23),
 (null, 'A mais poderosa companhia de mágicos', 23),
 (null, 'Então, vamos pelo mundo', 23);
-;
 
 
-insert into capitulo
+
+insert into capitulo values
 (null,'InuYasha capitulo1',8),
 (null,'InuYasha capitulo2',8),
 (null,'InuYasha capitulo3',8),
@@ -447,8 +437,10 @@ insert into capitulo
 (null,'kono subarashii sekai ni shukufuku wo capitulo56',21),
 (null,'kono subarashii sekai ni shukufuku wo capitulo57',22),
 (null,'kono subarashii sekai ni shukufuku wo capitulo58',22),
-(null,'kono subarashii sekai ni shukufuku wo capitulo59',22),
-(null, 'kenja no mago capitulo0' 23),
+(null,'kono subarashii sekai ni shukufuku wo capitulo59',22);
+
+
+/* (null, 'kenja no mago capitulo0' 23),
 (null, 'kenja no mago capitulo1' 23),
 (null, 'kenja no mago capitulo2' 23),
 (null, 'kenja no mago capitulo3' 23),
@@ -518,4 +510,4 @@ insert into capitulo
 (null, 'kenja no mago capitulo67', 24),
 (null, 'kenja no mago capitulo68', 24),
 (null, 'kenja no mago capitulo69', 24);
-
+ */
