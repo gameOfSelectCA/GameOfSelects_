@@ -640,7 +640,6 @@ insert into capitulo values
 (null,'kono subarashii sekai ni shukufuku wo capitulo6',14),
 (null,'kono subarashii sekai ni shukufuku wo capitulo7',14),
 (null,'kono subarashii sekai ni shukufuku wo capitulo8',15),
-(null,'kono subarashii sekai ni shukufuku wo capitulo9',15),
 (null,'kono subarashii sekai ni shukufuku wo capitulo10',15),
 (null,'kono subarashii sekai ni shukufuku wo capitulo11',15),
 (null,'kono subarashii sekai ni shukufuku wo capitulo12',15),

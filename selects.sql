@@ -115,5 +115,36 @@ select personagem.nome, obra.nome, anime.nome from personagem join obra on fkPro
 select (select count(idEpisodio) from episodio join saga on idsaga = fkSaga where saga.nome ='inuyasha temporada-4' )-(select count(idEpisodio) from episodio join saga on idsaga = fkSaga where saga.nome ='inuyasha temporada-1');
 
 
--- ! 03 
+-- ! 03 mostre por meio de um select chamado resultado qual é a quantidade de episodios registrados sem os episodios de 'inuyasha'
 
+
+
+select (select count(idEpisodio) from episodio join saga on idsaga = fkSaga)-(select count(idEpisodio) from episodio join saga on idsaga = fkSaga where saga.nome  not like '%inuyasha%') as resultado ;
+
+
+-- ! 04 mostre por meio de um select chamado resultado qual é a quantidade de capitulos registrados sem os capitulos de "InuYasha"
+
+
+
+select (select count(idCapitulo) from capitulo join saga on idsaga = fkSagaCapitulo  )-(select count(idCapitulo) from capitulo join saga on idsaga = fkSagaCapitulo where saga.nome   like '%InuYasha%' ) as resultado ;
+
+-- ! 05 busque o nome e id das sagas e dos capitulos mas apenas quando o nome da saga tiver a letra'Z' e o capitulo for menor  a 2585
+
+select saga.idSaga, saga.nome, capitulo.nome, capitulo.idCapitulo from capitulo join saga on idSaga = fkSagaCapitulo where saga.nome like '%z%' and idCapitulo<2585 ;
+
+
+-- & desafio 01  monte um select que mostre 3 informações a primeira é a quantidade de capitulos de InuYasha apelidado de InuYasha, o segundooo e a quantidade de capitulos de konoSuba apelidado de konoSuba e por fim mostre uma soma entre a primeira segunda informação apelidando de "total "
+select (select count(idCapitulo) from capitulo where nome like '%InuYasha%') as inuyasha,(select count(idCapitulo) from capitulo where nome like '%kono subarashii%') as konoSuba,((select count(idCapitulo) from capitulo where nome like '%InuYasha%')+(select count(idCapitulo) from capitulo where nome like '%kono subarashii%')) as total;
+-- & desafio 02 busque pelo nome dos episodios, das sagas(nome) , do anime(nome), da obra(nome), do protagonista(nome,objetivo) e o autor(nome) buscando apenas pelos episodios que tenham a palavra "mão", a obra que tenha a letra "K" o personagem que tnha o id =1006 e o autor que tenha no nome a palavra "akatsuki"
+
+select episodio.nome, saga.nome, anime.nome, obra.nome, personagem.nome, personagem.objetivo, autor.nome from episodio 
+  join saga on episodio.fksaga = saga.idsaga 
+  join anime on saga.fkanimesaga = idanime
+  join obra on anime.fkObraAnime = idobra 
+  join personagem on obra.fkProtagonistaObra = personagem.idpersonagem
+  join autor on obra.fkautor = idautor
+  where episodio.nome like '%mão%' 
+  and anime.nome like '%sh%' 
+  and obra.nome like '%k%' 
+  and personagem.id = 1006
+  and autor.nome like '%akatsuki%';
